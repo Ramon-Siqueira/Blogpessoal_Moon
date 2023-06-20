@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 function Navbar () {
@@ -8,7 +8,7 @@ return (
     <AppBar position="static">
                 <Toolbar variant="dense">
                     <Box className="cursor" >
-                        <Typography variant="h5" color="inherit">
+                        <Typography variant="h5" color="white">
                             BlogMoon
                         </Typography>
                     </Box>
@@ -36,7 +36,7 @@ return (
                         </Box>
                         <Link to="/login" className="text-decorator-nome">
                             <Box mx={1} className="cursor">
-                                <Typography variant="h6" color="inherit">
+                                <Typography variant="h6" color="white">
                                     logout
                                 </Typography>
                             </Box>

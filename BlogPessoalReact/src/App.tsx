@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
+import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import Home from './pages/home';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -18,6 +19,11 @@ function App(): JSX.Element {
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
+
+          
+
+          <Route path="/cadastrousuario" element={<CadastroUsuario />} />
+
           {/* <Route path="/cadastro" element={<CadastroUsuario />} /> */}
         </Routes>
       </div>
