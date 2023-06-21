@@ -1,35 +1,37 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
-import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import Home from './pages/home';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/Login';
-
-function App(): JSX.Element {
-
-
+import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
+import ListaTema from './components/temas/listatemas/ListaTema';
+import ListaPostagem from './components/postagens/listapostagens/ListaPostagem';
+function App() {
   return (
-    <BrowserRouter> 
-    {/* Tudo que precisa ser rederizado na tela precisa ficar dentro daqui */}
+    <Router>
       <Navbar />
-      <div style={{ minHeight: '80vh' }}>
-        <Routes> // Antigo Switch
-          <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+      <Routes>
 
-          
+        <Route path="/" element={<Login  />} />
 
-          <Route path="/cadastrousuario" element={<CadastroUsuario />} />
+        <Route path="/home" element={<Home />} />
 
-          {/* <Route path="/cadastro" element={<CadastroUsuario />} /> */}
-        </Routes>
-      </div>
+        <Route path="/login" element={<Login />} />
+
+        <Route path="/cadastrousuario" element={<CadastroUsuario/>} />
+
+        <Route path="/temas" element={<ListaTema />} />
+
+        <Route path="/posts" element={<ListaPostagem />} />
+
+
+      </Routes>
       <Footer />
-    </BrowserRouter>
-  )
+    </Router>
+
+  );
 }
 
-export default App
+export default App;
