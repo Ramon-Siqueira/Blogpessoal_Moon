@@ -7,6 +7,7 @@ import UserLogin from '../../models/UserLogin';
 import './Login.css';
 import { useDispatch } from 'react-redux';
 import { addToken } from "../../store/tokens/actions";
+import { toast } from 'react-toastify';
 
 function Login() {
     let navigate = useNavigate();
@@ -40,10 +41,27 @@ function Login() {
             e.preventDefault();
             try{
                 await login(`/usuarios/logar`, userLogin, setToken)
-
-                alert('Usuário logado com sucesso!');
+                toast.success('Usuário logado com sucesso!', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                    });
             }catch(error){
-                alert('Dados do usuário inconsistentes. Erro ao logar!');
+                toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                    position: "top-right",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: false,
+                    theme: "colored",
+                    progress: undefined,
+                    });
             }
         }
 
@@ -63,7 +81,7 @@ function Login() {
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}>
                         <Box marginRight={1}>
-                            <Typography variant='subtitle1' gutterBottom align='center'>Ainda não tem uma conta?</Typography>
+                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                         </Box>
                         <Link to='/cadastrousuario'>
                             <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
