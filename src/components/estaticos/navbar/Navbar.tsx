@@ -39,7 +39,7 @@ function Navbar() {
         <Toolbar variant="dense">
             <Box className='cursor'>
                 <Typography variant="h5" color="inherit">
-                    BlogMoon
+                    BlogPessoalMoon
                 </Typography>
             </Box>
 
