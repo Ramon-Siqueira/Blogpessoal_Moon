@@ -41,6 +41,7 @@ function Login() {
             e.preventDefault();
             try{
                 await login(`/usuarios/logar`, userLogin, setToken)
+
                 toast.success('Usuário logado com sucesso!', {
                     position: "top-right",
                     autoClose: 2000,
@@ -91,7 +92,7 @@ function Login() {
                 </Box>
             </Grid>
             <Grid xs={6} className='imagem'>
-
+                <img src="https://i.imgur.com/Ei3yHxf_d.jpg?maxwidth=520&shape=thumb&fidelity=high" alt="imagem de um castelo" />
             </Grid>
         </Grid>
     );

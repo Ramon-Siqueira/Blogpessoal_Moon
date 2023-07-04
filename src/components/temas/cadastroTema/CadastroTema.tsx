@@ -44,7 +44,7 @@ function CadastroTema() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/tema/${id}`, setTema, {
+        buscaId(`/temas/${id}`, setTema, {
             headers: {
               'Authorization': token
             }
@@ -66,12 +66,12 @@ function CadastroTema() {
     
             if (id !== undefined) {
                 console.log(tema)
-                put(`/tema`, tema, setTema, {
+                put(`/temas`, tema, setTema, {
                     headers: {
                         'Authorization': token
                     }
                 })
-                toast.success('Tema atualizado com sucesso', {
+                toast.success('Você precisa estar logado', {
                     position: "top-right",
                     autoClose: 2000,
                     hideProgressBar: false,
@@ -80,23 +80,14 @@ function CadastroTema() {
                     draggable: false,
                     theme: "colored",
                     progress: undefined,
-                    });
+                });
             } else {
-                post(`/tema`, tema, setTema, {
+                post(`/temas`, tema, setTema, {
                     headers: {
                         'Authorization': token
                     }
                 })
-                toast.success('Tema cadastrado com sucesso', {
-                    position: "top-right",
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    theme: "colored",
-                    progress: undefined,
-                    });
+                alert('Tema cadastrado com sucesso');
             }
             back()
     

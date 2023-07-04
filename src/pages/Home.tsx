@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import {Typography, Grid, Button} from '@material-ui/core';
 import {Box} from '@mui/material';
-import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
-import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
-import './Home.css';
+import TabPostagem from '../components/postagens/tabpostagem/TabPosatagem';
+import ModalPostagem from '../components/postagens/modalPostagem/ModalPostagem';
+import './home.css';
 import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
-import { TokenState } from '../../store/tokens/tokensReducer';
-import { Link } from 'react-router-dom';
+import { TokenState } from '../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 
 function Home() {
@@ -29,7 +28,7 @@ function Home() {
             theme: "colored",
             progress: undefined,
         });
-        navigate("/login")
+          navigate("/login")
   
       }
   }, [token])
@@ -45,9 +44,7 @@ function Home() {
                         <Box marginRight={1}>
                             <ModalPostagem />
                         </Box>
-                        <Link to="/posts" className="text-decorator-none">
-                            <Button variant="outlined" className='botao'>Ver Postagens</Button>
-                        </Link>
+                        <Button variant="outlined" className='botao'>Ver Postagens</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >

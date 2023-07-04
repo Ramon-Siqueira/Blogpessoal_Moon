@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import {Box} from '@mui/material';
 import Tema from '../../../models/Tema';
 import './ListaTema.css';
@@ -29,13 +29,13 @@ function ListaTema() {
         theme: "colored",
         progress: undefined,
         });
-        navigate("/login")
+      navigate("/login")
     }
   }, [token])
 
 
   async function getTema(){
-    await busca("/tema", setTemas, {
+    await busca("/temas", setTemas, {
       headers: {
         'Authorization': token
       }

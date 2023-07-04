@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import {Typography, Button, Card, CardActions, CardContent } from "@material-ui/core";
-import {Box} from '@mui/material';
-import './DeletarPostagem.css';
+import {Typography, Button, Card, CardActions, CardContent } from "@material-ui/core"
+import './DeletarPosatagem.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Postagem from '../../../models/Postagem';
 import { buscaId, deleteId } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import {Box} from '@mui/material';
 import { toast } from 'react-toastify';
 
 function DeletarPostagem() {
@@ -29,7 +29,7 @@ function DeletarPostagem() {
             theme: "colored",
             progress: undefined,
         });
-        navigate("/login")
+            navigate("/login")
     
         }
     }, [token])
