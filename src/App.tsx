@@ -3,7 +3,6 @@ import Navbar from './components/static/navbar/Navbar';
 import Footer from './components/static/footer/Footer';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import Home from './pages/Home';
-import Login from './pages/Login/Login';
 import './App.css';
 import ListaTema from './components/temas/listatemas/ListaTema';
 import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
@@ -15,6 +14,7 @@ import { Provider } from 'react-redux';
 import store from './store/store';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Login from './pages/Login';
 
 function App() {
   return (
