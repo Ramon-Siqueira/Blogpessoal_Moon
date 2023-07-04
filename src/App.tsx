@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/static/navbar/Navbar';
 import Footer from './components/static/footer/Footer';
@@ -16,6 +15,8 @@ import store from './store/store';
 import {ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from './pages/Login/Login';
+
+
 
 function App() {
   return (
